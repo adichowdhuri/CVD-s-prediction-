@@ -56,4 +56,4 @@ def show_page():
         df = pd.DataFrame(data)
 
         risk = model.predict(df)
-        st.subheader(f"Your risk of Cardiovascular Disease is {risk[0]:.4f}")
+        st.subheader(f"You have a {risk[0]:.4f}% chance of having Cardiovascular Disease")
