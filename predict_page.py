@@ -30,7 +30,8 @@ def show_page():
     is_sex = ("Male", "Female")
 
     gender = gender_encoder(st.selectbox("Gender", is_sex))
-    bmi = st.slider("What is your BMI", 0, 50, 0)
+    height = st.slider("What is your height (cm)", 0, 200, 0)
+    weight = st.slider("What is your height (kg)", 0, 200, 0)
     age = st.slider("What is your age", 0, 100, 0)
     smoking = yn_encoder(st.selectbox("Do you smoke", yes_no))
     alochol = yn_encoder(st.selectbox("Do you consume alcohol", yes_no))
@@ -44,6 +45,8 @@ def show_page():
     active = yn_encoder(st.selectbox("Are you physically active", yes_no))
     cancer = yn_encoder(st.selectbox("Do you have skin cancer", yes_no))
     diabetic = yn_encoder(st.selectbox("Are you diabetic", yes_no))
+
+    bmi = weight/ ((height/100)**2)
 
     ok = st.button("Predict risk of Cardiovascular Disease")
     if ok:
