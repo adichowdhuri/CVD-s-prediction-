@@ -30,8 +30,8 @@ def show_page():
     is_sex = ("Male", "Female")
 
     gender = gender_encoder(st.selectbox("Gender", is_sex))
-    height = st.slider("What is your height (cm)", 0, 200, 0)
-    weight = st.slider("What is your weight (kg)", 0, 200, 0)
+    height = st.slider("What is your height (cm)", 0, 200, 30)
+    weight = st.slider("What is your weight (kg)", 0, 200, 30)
     age = st.slider("What is your age", 0, 100, 0)
     smoking = yn_encoder(st.selectbox("Do you smoke", yes_no))
     alochol = yn_encoder(st.selectbox("Do you consume alcohol", yes_no))
