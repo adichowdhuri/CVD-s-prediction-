@@ -6,7 +6,7 @@ import pandas as pd
 
 st.set_page_config(page_title = 'Heart Disease Prediction', page_icon = '❤️')
 
-model = pickle.load(open('finalized_model.pkl', 'rb'))
+model = pickle.load(open('Streamlit_rakuten/finalized_model.pkl', 'rb'))
 
 def gender_encoder(var):
     if var == "Male":
